@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         R.layout.activity_main)
     setSupportActionBar(toolbar)
 
-    fab.setOnClickListener { view ->
+    fab.setOnClickListener {
       val clazz = Class.forName("com.github.takahirom.dfm_library.DynamicFeatureActivity")
       startActivity(Intent(this, clazz))
     }
