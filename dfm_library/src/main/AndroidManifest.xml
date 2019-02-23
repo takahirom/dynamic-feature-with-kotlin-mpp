@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+  xmlns:dist="http://schemas.android.com/apk/distribution"
   package="com.github.takahirom.dfm_library"
   >
 
-  <application>
-    <activity android:name=".DynamicFeatureActivity">
-    </activity>
-  </application>
+  <dist:module
+    dist:onDemand="false"
+    dist:title="test"
+    >
+    <dist:fusing dist:include="true"/>
+  </dist:module>
 
 </manifest>

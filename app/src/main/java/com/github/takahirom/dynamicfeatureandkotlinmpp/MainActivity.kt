@@ -1,10 +1,10 @@
 package com.github.takahirom.dynamicfeatureandkotlinmpp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.github.takahirom.dfm_library.DynamicFeatureActivity
 import com.github.takahirom.dynamicfeatureandkotlinmpp.dynamicfeatureandkotlinmpp.R
 import kotlinx.android.synthetic.main.activity_main.fab
 import kotlinx.android.synthetic.main.activity_main.toolbar
@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
 
     fab.setOnClickListener { view ->
-      DynamicFeatureActivity.start(this)
+      val clazz = Class.forName("com.github.takahirom.dfm_library.DynamicFeatureActivity")
+      startActivity(Intent(this, clazz))
     }
   }
 
