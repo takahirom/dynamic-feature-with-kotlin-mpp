@@ -1,1 +1,2 @@
 include ':app', ':dfm_library'
+enableFeaturePreview('GRADLE_METADATA')
