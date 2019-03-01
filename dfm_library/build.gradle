@@ -17,7 +17,7 @@ android {
   buildTypes {
     release {
       minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      proguardFiles 'proguard-rules.pro'
     }
   }
 }
@@ -25,6 +25,8 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation project(":app")
+
+  implementation project(":model")
 
   implementation 'androidx.appcompat:appcompat:1.0.2'
   implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
